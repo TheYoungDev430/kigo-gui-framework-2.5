@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kigo-gui-framework"
+version = "2.5"
+description = "Added a bunch of shaders, use cases in examples/"
+readme = "README.txt"
+requires-python = ">=3.8"
+license = { text = "zlib" }
+
+authors = [
+    { name = "Anand Kumar, Utkarsh Raghav Roy", email = "swiss.armyknife@icloud.com" }
+]
+
+keywords = [
+    "gui",
+    "qt",
+    "pyqt6",
+    "physics",
+    "pybullet",
+    "simulation",
+    "robotics",
+    "animation"
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: zlib/libpng License",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: User Interfaces",
+    "Topic :: Scientific/Engineering :: Physics"
+]
+
+dependencies = [
+    "PyQt6==6.7.0",
+    "pybullet>=3.2.5",
+    "pybullet_data",
+    "wasmtime>=25.0.0",
+    "pyopengl>=3.1.10",
+]
+[project.optional-dependencies]
+web = ["PyQt6-WebEngine==6.7.0"]
+full = ["markdown", "PyQt6-WebEngine==6.7.0"]
+
+[tool.setuptools.packages.find]
+include = ["kigo*"]
+namespaces = false
+
+
